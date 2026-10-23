@@ -4,20 +4,23 @@
       .mono { font-family: ui-monospace, 'JetBrains Mono', Consolas, monospace; }
       @keyframes pulseGlow {
         0%, 100% { stroke: #341b52; }
-        50% { stroke: #ff9e64; }
+        50% { stroke: #bb9af7; }
       }
       .btn-shell { animation: pulseGlow 3.8s ease-in-out infinite 1s; }
+      @media (prefers-reduced-motion: reduce) {
+        .btn-shell { animation: none; }
+      }
     </style>
   </defs>
   <rect x="1" y="1" width="248" height="48" rx="8" fill="#231a33" stroke="#341b52" stroke-width="1.5" class="btn-shell" />
   
   <!-- LinkedIn Icon -->
   <g transform="translate(24, 16)">
-    <rect x="0" y="0" width="18" height="18" rx="3" fill="#1a1426" stroke="#ff9e64" stroke-width="1.2" />
-    <text x="9" y="13" fill="#ff9e64" font-family="sans-serif" font-size="12" font-weight="900" text-anchor="middle">in</text>
+    <rect x="0" y="0" width="18" height="18" rx="3" fill="#1a1426" stroke="#bb9af7" stroke-width="1.2" />
+    <text x="9" y="13" fill="#bb9af7" font-family="sans-serif" font-size="12" font-weight="900" text-anchor="middle">in</text>
   </g>
 
-  <text x="56" y="27" fill="#ff9e64" class="mono" font-size="11.5" font-weight="700" letter-spacing="1">LINKEDIN</text>
-  <text x="56" y="39" fill="#a79cb8" class="mono" font-size="9">/in/404-lux</text>
-  <text x="226" y="30" fill="#bb9af7" class="mono" font-size="13">↗</text>
+  <text x="56" y="27" fill="#bb9af7" class="mono" font-size="11.5" font-weight="700" letter-spacing="1">LINKEDIN</text>
+  <text x="56" y="39" fill="#a79cb8" class="mono" font-size="8.5">/in/harra-lou-ramos</text>
+  <text x="226" y="30" fill="#ff9e64" class="mono" font-size="13">↗</text>
 </svg>

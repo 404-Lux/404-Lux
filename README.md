@@ -194,32 +194,21 @@
 </p>
 
 <p align="center">
-  <a href="mailto:lux@example.com">
-    <img src="assets/btn-email.svg" width="240" alt="Email Button" />
-  </a>
-  &nbsp;
-  <a href="https://github.com/404-Lux">
-    <img src="assets/btn-github.svg" width="240" alt="GitHub Button" />
-  </a>
-  &nbsp;
-  <a href="https://linkedin.com/in/404-lux">
-    <img src="assets/btn-linkedin.svg" width="240" alt="LinkedIn Button" />
-  </a>
+  <a href="mailto:harra.ramos26@gmail.com"><img src="assets/btn-email.svg" width="240" alt="Email Button" /></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/harra-lou-ramos-8388753a0/"><img src="assets/btn-linkedin.svg" width="240" alt="LinkedIn Button" /></a>&nbsp;&nbsp;<a href="http://tiktok.com/@codebyher"><img src="assets/btn-tiktok.svg" width="240" alt="TikTok Button" /></a>
 </p>
 
 <br />
 
-<!-- EASTER EGG: CAT TERMINAL -->
-```text
-       |\__/,|   (`\
-     _.|o o  |_   ) )     [ PURRING IN TYPESCRIPT ]
-   -(((---(((--------     "404: Sleep not found. Code running smoothly."
-```
+<!-- EASTER EGG: COZY CAT TERMINAL SCENE -->
+<p align="center">
+  <img src="assets/cat-easter-egg.svg" width="100%" alt="Pixel-art orange cat wearing headphones at a glowing desk, with a speech bubble saying 404: Sleep not found." />
+</p>
 
 <p align="center">
   <img src="assets/divider.svg" width="100%" alt="Lo-Fi Equalizer Divider" />
 </p>
 
 <div align="center">
-  <sub>Crafted in <b>JetBrains Mono</b> ▸ Palette: <code>#1a1426</code> • <code>#bb9af7</code> • <code>#ff9e64</code> ▸ <i>"Page not found? Try again with more cola."</i></sub>
+  <sub>Palette: <code>#1a1426</code> • <code>#bb9af7</code> • <code>#ff9e64</code> ▸ Designed with pure SVGs &amp; code ▸ <i>"Page not found? Try again with more cola."</i></sub>
 </div>
+

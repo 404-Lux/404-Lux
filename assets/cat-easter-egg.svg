@@ -1,0 +1,454 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 270" width="100%" height="270">
+  <defs>
+    <style><![CDATA[
+      .mono { font-family: ui-monospace, 'JetBrains Mono', Consolas, monospace; }
+      
+      /* Subtle Terminal Scanlines */
+      .scanlines {
+        background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.25));
+        background-size: 100% 4px;
+      }
+
+      /* Head bobbing to lo-fi beat */
+      @keyframes headBob {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-3.5px); }
+      }
+      .cat-head-bob {
+        animation: headBob 1.6s ease-in-out infinite;
+        transform-origin: 247px 115px;
+      }
+
+      /* Tail sway */
+      @keyframes tailSway {
+        0%, 100% { transform: rotate(0deg); }
+        50% { transform: rotate(10deg); }
+      }
+      .cat-tail {
+        animation: tailSway 3.2s ease-in-out infinite;
+        transform-origin: 275px 160px;
+      }
+
+      /* Cat Eye Blink */
+      @keyframes catBlink {
+        0%, 92%, 100% { transform: scaleY(1); }
+        94%, 96% { transform: scaleY(0.08); }
+      }
+      .cat-eyes {
+        animation: catBlink 4.5s ease-in-out infinite;
+        transform-origin: 247px 94px;
+      }
+
+      /* Floating Music Notes */
+      @keyframes floatNote1 {
+        0% { transform: translate(0, 0) scale(0.8); opacity: 0; }
+        25% { opacity: 0.9; }
+        100% { transform: translate(-14px, -32px) scale(1.15); opacity: 0; }
+      }
+      @keyframes floatNote2 {
+        0% { transform: translate(0, 0) scale(0.8); opacity: 0; }
+        25% { opacity: 0.9; }
+        100% { transform: translate(16px, -34px) scale(1.15); opacity: 0; }
+      }
+      @keyframes floatSparkle {
+        0%, 100% { opacity: 0.2; transform: scale(0.8); }
+        50% { opacity: 0.85; transform: scale(1.2); }
+      }
+      .music-note-1 { animation: floatNote1 3.2s ease-out infinite; }
+      .music-note-2 { animation: floatNote2 3.6s ease-out infinite 1.6s; }
+      .sparkle-glow { animation: floatSparkle 2.4s ease-in-out infinite; }
+
+      /* Cola Fizz Bubbles */
+      @keyframes fizzRise {
+        0% { transform: translate(0, 0) scale(0.5); opacity: 0; }
+        35% { opacity: 0.85; }
+        100% { transform: translate(4px, -22px) scale(1.2); opacity: 0; }
+      }
+      .fizz-1 { animation: fizzRise 2.2s ease-out infinite; }
+      .fizz-2 { animation: fizzRise 2.7s ease-out infinite 1.1s; }
+
+      /* Code Typing and Cursor Blink */
+      @keyframes cursorBlink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      .cursor { animation: cursorBlink 0.8s infinite; }
+
+      @keyframes codeScroll {
+        0%, 20% { transform: translateY(0); }
+        25%, 45% { transform: translateY(-13px); }
+        50%, 70% { transform: translateY(-26px); }
+        75%, 95% { transform: translateY(-39px); }
+        100% { transform: translateY(0); }
+      }
+      .code-stream { animation: codeScroll 10s ease-in-out infinite; }
+
+      /* Speech Bubble Cycling: 4 quotes in 16s cycle */
+      @keyframes quote1 {
+        0%, 21% { opacity: 1; transform: translateY(0); }
+        24%, 97% { opacity: 0; transform: translateY(-4px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes quote2 {
+        0%, 22% { opacity: 0; transform: translateY(4px); }
+        25%, 46% { opacity: 1; transform: translateY(0); }
+        49%, 100% { opacity: 0; transform: translateY(-4px); }
+      }
+      @keyframes quote3 {
+        0%, 47% { opacity: 0; transform: translateY(4px); }
+        50%, 71% { opacity: 1; transform: translateY(0); }
+        74%, 100% { opacity: 0; transform: translateY(-4px); }
+      }
+      @keyframes quote4 {
+        0%, 72% { opacity: 0; transform: translateY(4px); }
+        75%, 96% { opacity: 1; transform: translateY(0); }
+        99%, 100% { opacity: 0; transform: translateY(-4px); }
+      }
+      .speech-1 { animation: quote1 16s ease-in-out infinite; }
+      .speech-2 { animation: quote2 16s ease-in-out infinite; }
+      .speech-3 { animation: quote3 16s ease-in-out infinite; }
+      .speech-4 { animation: quote4 16s ease-in-out infinite; }
+
+      /* Equalizer animations */
+      @keyframes eq1 { 0%, 100% { height: 6px; y: 212px; } 50% { height: 18px; y: 200px; } }
+      @keyframes eq2 { 0%, 100% { height: 18px; y: 200px; } 50% { height: 7px; y: 211px; } }
+      @keyframes eq3 { 0%, 100% { height: 12px; y: 206px; } 50% { height: 20px; y: 198px; } }
+      @keyframes eq4 { 0%, 100% { height: 15px; y: 203px; } 50% { height: 5px; y: 213px; } }
+      .eq-bar-1 { animation: eq1 1.1s ease-in-out infinite; }
+      .eq-bar-2 { animation: eq2 0.85s ease-in-out infinite 0.15s; }
+      .eq-bar-3 { animation: eq3 1.3s ease-in-out infinite 0.3s; }
+      .eq-bar-4 { animation: eq4 0.95s ease-in-out infinite 0.45s; }
+
+      /* Subtle 404 Glitch */
+      @keyframes glitchBadge {
+        0%, 94%, 100% { transform: translate(0, 0); opacity: 1; }
+        95% { transform: translate(-2px, 1px); opacity: 0.8; }
+        96% { transform: translate(2px, -1px); opacity: 1; }
+        97% { transform: translate(0, 0); opacity: 0.9; }
+      }
+      .glitch-badge { animation: glitchBadge 5s ease-in-out infinite; }
+
+      /* Respect Reduced Motion */
+      @media (prefers-reduced-motion: reduce) {
+        .cat-head-bob, .cat-tail, .cat-eyes, .music-note-1, .music-note-2,
+        .fizz-1, .fizz-2, .cursor, .code-stream, .eq-bar-1, .eq-bar-2,
+        .eq-bar-3, .eq-bar-4, .glitch-badge, .sparkle-glow {
+          animation: none !important;
+        }
+        .speech-1 { opacity: 1 !important; }
+        .speech-2, .speech-3, .speech-4 { display: none !important; }
+      }
+    ]]></style>
+
+    <!-- Gradients -->
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#231a33" />
+      <stop offset="100%" stop-color="#1b1428" />
+    </linearGradient>
+
+    <linearGradient id="monitorScreenGlow" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#bb9af7" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#bb9af7" stop-opacity="0.0" />
+    </linearGradient>
+
+    <linearGradient id="purrGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bb9af7" />
+      <stop offset="50%" stop-color="#ff9e64" />
+      <stop offset="100%" stop-color="#73daca" />
+    </linearGradient>
+
+    <pattern id="scanlinesPattern" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="2" x2="100" y2="2" stroke="#000000" stroke-width="1" opacity="0.12" />
+    </pattern>
+
+    <clipPath id="monitorClip">
+      <rect x="52" y="85" width="121" height="78" rx="2" />
+    </clipPath>
+  </defs>
+
+  <!-- =========================================================================
+       MAIN PANEL SHELL and TITLEBAR
+       ========================================================================= -->
+  <rect x="1" y="1" width="858" height="268" rx="12" fill="url(#panelGrad)" stroke="#341b52" stroke-width="1.5" />
+  <rect x="1" y="1" width="858" height="268" rx="12" fill="url(#scanlinesPattern)" pointer-events="none" />
+
+  <!-- Terminal Titlebar -->
+  <path d="M 1 12 Q 1 1 12 1 L 848 1 Q 859 1 859 12 L 859 34 L 1 34 Z" fill="#1d152b" />
+  <line x1="1" y1="34" x2="859" y2="34" stroke="#341b52" stroke-width="1" />
+
+  <!-- Titlebar Dots -->
+  <circle cx="22" cy="17.5" r="4.5" fill="#f7768e" />
+  <circle cx="36" cy="17.5" r="4.5" fill="#e0af68" />
+  <circle cx="50" cy="17.5" r="4.5" fill="#73daca" />
+
+  <!-- Title Path Label -->
+  <text x="68" y="21.5" fill="#a79cb8" class="mono" font-size="11">404-lux: ~/easter_egg.sh</text>
+
+  <!-- Titlebar Right Tag -->
+  <g transform="translate(770, 8)">
+    <rect x="0" y="0" width="76" height="20" rx="4" fill="#1a1426" stroke="#ff9e64" stroke-width="1" />
+    <circle cx="12" cy="10" r="3" fill="#73daca" />
+    <text x="22" y="13.5" fill="#ff9e64" class="mono" font-size="9" font-weight="700">PURR</text>
+  </g>
+
+  <!-- =========================================================================
+       LEFT HALF: COZY DESK SCENE AT NIGHT
+       ========================================================================= -->
+  
+  <!-- Lo-fi Floor Shadow / Rug -->
+  <ellipse cx="220" cy="246" rx="175" ry="9" fill="#140e1e" />
+
+  <!-- Desk Structure -->
+  <!-- Desk Legs -->
+  <rect x="52" y="186" width="6" height="54" fill="#181124" stroke="#2a1a3e" stroke-width="1" />
+  <rect x="382" y="186" width="6" height="54" fill="#181124" stroke="#2a1a3e" stroke-width="1" />
+  <!-- Underdesk Cable / Power Brick -->
+  <rect x="70" y="230" width="22" height="10" rx="2" fill="#150f20" stroke="#341b52" stroke-width="1" />
+  <path d="M 92 235 Q 115 242 140 234" stroke="#341b52" stroke-width="1.2" fill="none" />
+  <!-- Desk Top Surface -->
+  <rect x="36" y="178" width="362" height="9" rx="2" fill="#2c1f3f" stroke="#4a2872" stroke-width="1" />
+  <line x1="36" y1="181" x2="398" y2="181" stroke="#ff9e64" stroke-width="0.7" opacity="0.3" />
+
+  <!-- Monitor Stand and Base -->
+  <rect x="94" y="173" width="36" height="5" rx="1" fill="#1a1426" stroke="#341b52" stroke-width="1" />
+  <rect x="109" y="157" width="6" height="17" fill="#1e162d" />
+
+  <!-- Glowing Monitor Screen Outer Bezel -->
+  <rect x="48" y="80" width="129" height="88" rx="5" fill="#120c1c" stroke="#bb9af7" stroke-width="1.5" />
+  
+  <!-- Monitor Ambient Light Cast Cone onto Desk and Cat -->
+  <polygon points="177,88 255,105 245,182 177,162" fill="url(#monitorScreenGlow)" pointer-events="none" />
+
+  <!-- Monitor Screen Inner Display -->
+  <g clip-path="url(#monitorClip)">
+    <rect x="52" y="85" width="121" height="78" fill="#0c0714" />
+    
+    <!-- Code Editor Title in Monitor -->
+    <rect x="52" y="85" width="121" height="11" fill="#1a1326" />
+    <circle cx="58" cy="90.5" r="1.5" fill="#f7768e" />
+    <circle cx="63" cy="90.5" r="1.5" fill="#e0af68" />
+    <circle cx="68" cy="90.5" r="1.5" fill="#73daca" />
+    <text x="74" y="93.5" fill="#a79cb8" class="mono" font-size="7">index.ts</text>
+
+    <!-- Scrolling Code Text Inside Monitor -->
+    <g class="code-stream mono" font-size="7">
+      <text x="56" y="108" fill="#ff9e64" class="mono">const cat = "purr";</text>
+      <text x="56" y="121" fill="#bb9af7" class="mono">while (awake) {</text>
+      <text x="62" y="134" fill="#73daca" class="mono">  code();</text>
+      <text x="62" y="147" fill="#fff3e6" class="mono">  drinkCola();</text>
+      <text x="56" y="160" fill="#bb9af7" class="mono">}</text>
+      <text x="56" y="173" fill="#ff9e64" class="mono">export default 404;</text>
+      <text x="56" y="186" fill="#a79cb8" class="mono">// sleep: not found</text>
+    </g>
+
+    <!-- Blinking Cursor in Editor -->
+    <rect x="94" y="114" width="4" height="7" fill="#ff9e64" class="cursor" />
+  </g>
+
+  <!-- Cute Lo-Fi Ergonomic Gaming Chair -->
+  <rect x="210" y="72" width="76" height="106" rx="14" fill="#160f22" stroke="#341b52" stroke-width="1.5" />
+  <rect x="206" y="168" width="84" height="13" rx="4" fill="#201730" stroke="#341b52" stroke-width="1.2" />
+
+  <!-- Animated Cat Mascot Group -->
+  <!-- Cat Swaying Tail (Anchored behind chair) -->
+  <g class="cat-tail">
+    <!-- Tabby Tail Segments -->
+    <path d="M 276 158 C 298 152, 308 132, 292 116 C 284 108, 276 114, 281 122 C 286 130, 282 144, 270 148" fill="#ff9e64" stroke="#d97030" stroke-width="1.5" />
+    <circle cx="290" cy="116" r="4.5" fill="#fff3e6" />
+    <!-- Tail Tabby Stripes -->
+    <path d="M 288 140 L 294 144" stroke="#d97030" stroke-width="2" stroke-linecap="round" />
+    <path d="M 292 128 L 298 131" stroke="#d97030" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Cat Body -->
+  <rect x="220" y="122" width="56" height="52" rx="14" fill="#ff9e64" />
+  <!-- Body Tabby Stripes -->
+  <path d="M 222 135 L 230 137 M 222 145 L 232 147" stroke="#d97030" stroke-width="2" stroke-linecap="round" />
+  <path d="M 274 135 L 266 137 M 274 145 L 264 147" stroke="#d97030" stroke-width="2" stroke-linecap="round" />
+  <!-- Cream Chest Patch -->
+  <rect x="234" y="130" width="28" height="34" rx="8" fill="#fff3e6" opacity="0.9" />
+
+  <!-- Cat Bobbing Head and Headphones Group -->
+  <g class="cat-head-bob">
+    <!-- Floating Lo-Fi Music Notes from Headphones -->
+    <g class="music-note-1 mono" fill="#bb9af7" font-size="16" font-weight="bold">
+      <text x="194" y="68">♪</text>
+    </g>
+    <g class="music-note-2 mono" fill="#ff9e64" font-size="14" font-weight="bold">
+      <text x="296" y="64">♫</text>
+    </g>
+    <g class="sparkle-glow" fill="#73daca" font-size="11">
+      <text x="286" y="46">✦</text>
+    </g>
+
+    <!-- Cat Ears -->
+    <!-- Left Ear -->
+    <polygon points="218,80 230,50 244,74" fill="#ff9e64" />
+    <polygon points="223,76 230,57 238,74" fill="#f7768e" />
+    <!-- Right Ear -->
+    <polygon points="252,74 266,50 278,80" fill="#ff9e64" />
+    <polygon points="258,74 266,57 273,76" fill="#f7768e" />
+
+    <!-- Cat Head Round Shape -->
+    <rect x="215" y="70" width="66" height="52" rx="16" fill="#ff9e64" />
+
+    <!-- Forehead Tabby Stripes -->
+    <path d="M 243 71 L 243 79 M 248 70 L 248 81 M 253 71 L 253 79" stroke="#d97030" stroke-width="2.2" stroke-linecap="round" />
+
+    <!-- Cat Blinking Eyes -->
+    <g class="cat-eyes">
+      <!-- Left Eye -->
+      <ellipse cx="233" cy="93" rx="4.5" ry="4.5" fill="#1a1426" />
+      <circle cx="234.5" cy="91.5" r="1.5" fill="#fff3e6" />
+      <!-- Right Eye -->
+      <ellipse cx="263" cy="93" rx="4.5" ry="4.5" fill="#1a1426" />
+      <circle cx="264.5" cy="91.5" r="1.5" fill="#fff3e6" />
+    </g>
+
+    <!-- Cream Muzzle and Cute :3 Mouth -->
+    <ellipse cx="248" cy="103" rx="13" ry="8.5" fill="#fff3e6" />
+    <!-- Pink Nose -->
+    <polygon points="248,99 245,96 251,96" fill="#f7768e" />
+    <!-- :3 Cat Smile -->
+    <path d="M 242 102 Q 245 105.5 248 102 Q 251 105.5 254 102" stroke="#1a1426" stroke-width="1.6" fill="none" stroke-linecap="round" />
+
+    <!-- Whiskers -->
+    <line x1="216" y1="100" x2="228" y2="102" stroke="#fff3e6" stroke-width="1.2" opacity="0.8" />
+    <line x1="215" y1="106" x2="228" y2="105" stroke="#fff3e6" stroke-width="1.2" opacity="0.8" />
+    <line x1="268" y1="102" x2="280" y2="100" stroke="#fff3e6" stroke-width="1.2" opacity="0.8" />
+    <line x1="268" y1="105" x2="281" y2="106" stroke="#fff3e6" stroke-width="1.2" opacity="0.8" />
+
+    <!-- Purple Headphones Headband -->
+    <path d="M 207 88 A 42 42 0 0 1 289 88" stroke="#bb9af7" stroke-width="5.5" fill="none" stroke-linecap="round" />
+    <!-- Headphone Cushion Earcups -->
+    <rect x="201" y="80" width="12" height="23" rx="4" fill="#bb9af7" stroke="#1a1426" stroke-width="1.5" />
+    <rect x="203" y="84" width="8" height="15" rx="2" fill="#341b52" />
+    <rect x="283" y="80" width="12" height="23" rx="4" fill="#bb9af7" stroke="#1a1426" stroke-width="1.5" />
+    <rect x="285" y="84" width="8" height="15" rx="2" fill="#341b52" />
+  </g>
+
+  <!-- Keyboard on Desk -->
+  <rect x="180" y="172" width="60" height="7" rx="2" fill="#181124" stroke="#bb9af7" stroke-width="1" />
+  <line x1="184" y1="175" x2="236" y2="175" stroke="#a79cb8" stroke-width="1" stroke-dasharray="2,2" />
+
+  <!-- Cat Paws on Keyboard -->
+  <rect x="188" y="169" width="12" height="7" rx="3" fill="#ff9e64" stroke="#d97030" stroke-width="0.8" />
+  <rect x="214" y="169" width="12" height="7" rx="3" fill="#ff9e64" stroke="#d97030" stroke-width="0.8" />
+
+  <!-- Tiny Ice-Cold Coca-Cola Can Beside Keyboard -->
+  <g transform="translate(262, 148)">
+    <!-- Red Can Body -->
+    <rect x="0" y="0" width="18" height="32" rx="3" fill="#f7768e" stroke="#1a1426" stroke-width="1.2" />
+    <!-- Metallic Rims -->
+    <rect x="1" y="0" width="16" height="2" fill="#e0af68" />
+    <rect x="1" y="30" width="16" height="2" fill="#341b52" />
+    <!-- White Dynamic Ribbon Wave -->
+    <path d="M 1 18 Q 9 13 17 19" stroke="#fff3e6" stroke-width="2" fill="none" />
+    <text x="5" y="14" fill="#fff3e6" class="mono" font-size="8" font-weight="900">C</text>
+    
+    <!-- Condensation Drops -->
+    <circle cx="4" cy="9" r="0.8" fill="#fff3e6" opacity="0.8" />
+    <circle cx="14" cy="23" r="0.8" fill="#fff3e6" opacity="0.8" />
+
+    <!-- Angled Straw -->
+    <path d="M 8 0 L 14 -12 L 20 -11" stroke="#fff3e6" stroke-width="2.2" fill="none" stroke-linecap="round" />
+
+    <!-- Fizz Bubbles Rising From Straw -->
+    <circle cx="21" cy="-14" r="1.5" fill="#fff3e6" class="fizz-1" />
+    <circle cx="23" cy="-17" r="1" fill="#73daca" class="fizz-2" />
+  </g>
+
+  <!-- =========================================================================
+       RIGHT HALF: DYNAMIC SPEECH BUBBLE and LO-FI PURRING PLAYER
+       ========================================================================= -->
+
+  <!-- Speech Bubble Container -->
+  <g transform="translate(425, 46)">
+    <!-- Speech Bubble Shell -->
+    <rect x="14" y="0" width="395" height="96" rx="10" fill="#1a1426" stroke="#ff9e64" stroke-width="1.5" />
+    <!-- Speech Bubble Pointer pointing to cat -->
+    <polygon points="14,34 0,42 14,50" fill="#1a1426" />
+    <polyline points="14,34 0,42 14,50" stroke="#ff9e64" stroke-width="1.5" fill="none" />
+    <!-- Overwrite edge seam -->
+    <line x1="14.5" y1="35" x2="14.5" y2="49" stroke="#1a1426" stroke-width="2" />
+
+    <!-- Speech Header -->
+    <text x="32" y="22" fill="#bb9af7" class="mono" font-size="10.5" font-weight="700">▸ MASCOT_THOUGHTS.log  [LIVE]</text>
+    <line x1="32" y1="28" x2="385" y2="28" stroke="#341b52" stroke-width="1" />
+
+    <!-- Quote 1: 404: Sleep not found -->
+    <g class="speech-1">
+      <text x="32" y="52" fill="#ff9e64" class="mono" font-size="14.5" font-weight="700">"404: Sleep not found."</text>
+      <text x="32" y="74" fill="#fff3e6" class="mono" font-size="11.5">▸ Code running smoothly into the late night ✦</text>
+      <text x="358" y="74" fill="#ff9e64" class="mono cursor" font-size="12">▌</text>
+    </g>
+
+    <!-- Quote 2: Code running smoothly -->
+    <g class="speech-2">
+      <text x="32" y="52" fill="#73daca" class="mono" font-size="14.5" font-weight="700">"Code running smoothly."</text>
+      <text x="32" y="74" fill="#fff3e6" class="mono" font-size="11.5">▸ 0 errors, 0 warnings • TypeScript compiler happy ❯</text>
+      <text x="375" y="74" fill="#73daca" class="mono cursor" font-size="12">▌</text>
+    </g>
+
+    <!-- Quote 3: One more commit... -->
+    <g class="speech-3">
+      <text x="32" y="52" fill="#bb9af7" class="mono" font-size="14.5" font-weight="700">"One more commit..."</text>
+      <text x="32" y="74" fill="#fff3e6" class="mono" font-size="11.5">▸ Just perfecting this pixel art before sunrise ✦</text>
+      <text x="368" y="74" fill="#bb9af7" class="mono cursor" font-size="12">▌</text>
+    </g>
+
+    <!-- Quote 4: Refilling cola. brb. -->
+    <g class="speech-4">
+      <text x="32" y="52" fill="#f7768e" class="mono" font-size="14.5" font-weight="700">"Refilling cola. brb."</text>
+      <text x="32" y="74" fill="#fff3e6" class="mono" font-size="11.5">▸ Chilled caffeine reserves replenished • purring ❯</text>
+      <text x="372" y="74" fill="#f7768e" class="mono cursor" font-size="12">▌</text>
+    </g>
+  </g>
+
+  <!-- Lo-Fi Audio and Purring Status Console -->
+  <g transform="translate(425, 154)">
+    <!-- Sub-console Shell -->
+    <rect x="14" y="0" width="395" height="98" rx="10" fill="#1e162d" stroke="#341b52" stroke-width="1.5" />
+
+    <!-- Header / Track Title -->
+    <text x="32" y="22" fill="#bb9af7" class="mono" font-size="11" font-weight="700">♫ NOW PURRING: lofi-beats-vol.404</text>
+    <text x="32" y="36" fill="#a79cb8" class="mono" font-size="9">92 BPM • 44.1 kHz • Stereo Purr</text>
+
+    <!-- 404 Glitch Badge -->
+    <g transform="translate(325, 12)">
+      <g class="glitch-badge">
+        <rect x="0" y="0" width="68" height="20" rx="4" fill="#150f22" stroke="#ff9e64" stroke-width="1" />
+        <text x="34" y="13.5" fill="#ff9e64" class="mono" font-size="9" font-weight="700" text-anchor="middle">404 zZz</text>
+      </g>
+    </g>
+
+    <!-- Jumping Equalizer Bars -->
+    <g transform="translate(32, -150)">
+      <rect x="0" y="206" width="4" height="12" rx="1" fill="#bb9af7" class="eq-bar-1" />
+      <rect x="7" y="200" width="4" height="18" rx="1" fill="#ff9e64" class="eq-bar-2" />
+      <rect x="14" y="208" width="4" height="10" rx="1" fill="#73daca" class="eq-bar-3" />
+      <rect x="21" y="203" width="4" height="15" rx="1" fill="#bb9af7" class="eq-bar-4" />
+      <rect x="28" y="200" width="4" height="18" rx="1" fill="#ff9e64" class="eq-bar-1" />
+      <rect x="35" y="207" width="4" height="11" rx="1" fill="#73daca" class="eq-bar-2" />
+      <rect x="42" y="202" width="4" height="16" rx="1" fill="#bb9af7" class="eq-bar-3" />
+      <rect x="49" y="210" width="4" height="8" rx="1" fill="#ff9e64" class="eq-bar-4" />
+      <rect x="56" y="204" width="4" height="14" rx="1" fill="#73daca" class="eq-bar-1" />
+      <rect x="63" y="198" width="4" height="20" rx="1" fill="#bb9af7" class="eq-bar-2" />
+      <rect x="70" y="206" width="4" height="12" rx="1" fill="#ff9e64" class="eq-bar-3" />
+      <rect x="77" y="201" width="4" height="17" rx="1" fill="#73daca" class="eq-bar-4" />
+      <rect x="84" y="209" width="4" height="9" rx="1" fill="#bb9af7" class="eq-bar-1" />
+      <rect x="91" y="203" width="4" height="15" rx="1" fill="#ff9e64" class="eq-bar-2" />
+    </g>
+
+    <!-- Purring Progress Bar -->
+    <g transform="translate(142, 50)">
+      <text x="0" y="10" fill="#a79cb8" class="mono" font-size="9" font-weight="600">PURRING IN TYPESCRIPT</text>
+      <rect x="0" y="14" width="170" height="7" rx="3.5" fill="#150f22" stroke="#341b52" stroke-width="1" />
+      <rect x="1" y="15" width="138" height="5" rx="2.5" fill="url(#purrGrad)" />
+      <text x="180" y="21" fill="#ff9e64" class="mono" font-size="9.5" font-weight="700">82%</text>
+    </g>
+
+    <!-- Bottom Stack Tech Line -->
+    <text x="32" y="86" fill="#a79cb8" class="mono" font-size="9.5">▸ STACK: HTML • CSS • JS • React • Next.js • TypeScript</text>
+  </g>
+</svg>

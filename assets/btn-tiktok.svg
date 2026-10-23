@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 50" width="250" height="50">
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, 'JetBrains Mono', Consolas, monospace; }
+      @keyframes pulseGlow {
+        0%, 100% { stroke: #341b52; }
+        50% { stroke: #ff9e64; }
+      }
+      .btn-shell { animation: pulseGlow 3.6s ease-in-out infinite 0.7s; }
+      @media (prefers-reduced-motion: reduce) {
+        .btn-shell { animation: none; }
+      }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="248" height="48" rx="8" fill="#231a33" stroke="#341b52" stroke-width="1.5" class="btn-shell" />
+  
+  <!-- TikTok Icon -->
+  <g transform="translate(24, 15)">
+    <rect x="0" y="0" width="20" height="20" rx="4" fill="#1a1426" stroke="#341b52" stroke-width="1" />
+    <path d="M 12 4.5 C 12.6 6.5 14 8 16 8.3 L 16 10.7 C 14.6 10.6 13.2 10.1 12.1 9.2 L 12.1 13.8 C 12.1 16.2 10.2 17.8 7.8 17.3 C 6.2 16.9 5 15.4 5 13.8 C 5 11.9 6.6 10.3 8.5 10.3 C 9 10.3 9.5 10.4 10 10.6 L 10 12.9 C 9.6 12.7 9.1 12.6 8.6 12.7 C 7.6 12.9 7 13.7 7.2 14.6 C 7.4 15.3 8.1 15.8 8.8 15.7 C 9.7 15.6 10.2 14.8 10.2 13.9 L 10.2 4.5 Z" fill="#ff9e64" />
+  </g>
+
+  <!-- Button Label -->
+  <text x="56" y="27" fill="#ff9e64" class="mono" font-size="11.5" font-weight="700" letter-spacing="1">TIKTOK</text>
+  <text x="56" y="39" fill="#a79cb8" class="mono" font-size="8.5">@codebyher</text>
+  <text x="226" y="30" fill="#bb9af7" class="mono" font-size="13">↗</text>
+</svg>
