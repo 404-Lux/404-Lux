@@ -169,7 +169,7 @@
 </p>
 
 <p align="center">
-  <a href="mailto:harra.ramos26@gmail.com"><img src="assets/btn-email.svg" width="240" alt="Email Button" /></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/harra-lou-ramos-8388753a0/"><img src="assets/btn-linkedin.svg" width="240" alt="LinkedIn Button" /></a>&nbsp;&nbsp;<a href="http://tiktok.com/@codebyher"><img src="assets/btn-tiktok.svg" width="240" alt="TikTok Button" /></a>
+  <a href="mailto:harra.ramos26@gmail.com"><img src="assets/btn-email.svg" width="240" alt="Email Button" /></a>&nbsp;&nbsp;<a href="https://www.instagram.com/harramos_26/"><img src="assets/btn-instagram.svg" width="240" alt="Instagram Button" /></a>&nbsp;&nbsp;<a href="http://tiktok.com/@codebyher"><img src="assets/btn-tiktok.svg" width="240" alt="TikTok Button" /></a>
 </p>
 
 <br />
