@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 24" width="100%" height="24">
+  <defs>
+    <linearGradient id="lineLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a1426" stop-opacity="0" />
+      <stop offset="70%" stop-color="#341b52" />
+      <stop offset="100%" stop-color="#bb9af7" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="lineRight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bb9af7" stop-opacity="0.8" />
+      <stop offset="30%" stop-color="#341b52" />
+      <stop offset="100%" stop-color="#1a1426" stop-opacity="0" />
+    </linearGradient>
+
+    <style>
+      @keyframes eqBounce {
+        0%, 100% { height: 4px; y: 10px; }
+        50% { height: 18px; y: 3px; }
+      }
+      .bar {
+        rx: 1.5;
+        animation: eqBounce 1.2s ease-in-out infinite;
+      }
+      .b1 { animation-delay: 0.0s; fill: #bb9af7; }
+      .b2 { animation-delay: 0.2s; fill: #ff9e64; }
+      .b3 { animation-delay: 0.4s; fill: #fff3e6; }
+      .b4 { animation-delay: 0.1s; fill: #bb9af7; }
+      .b5 { animation-delay: 0.3s; fill: #ff9e64; }
+      .b6 { animation-delay: 0.5s; fill: #bb9af7; }
+      .b7 { animation-delay: 0.25s; fill: #fff3e6; }
+      .b8 { animation-delay: 0.35s; fill: #ff9e64; }
+      .b9 { animation-delay: 0.15s; fill: #bb9af7; }
+    </style>
+  </defs>
+
+  <!-- Left Accent Line -->
+  <line x1="20" y1="12" x2="385" y2="12" stroke="url(#lineLeft)" stroke-width="1.5" />
+
+  <!-- Center Equalizer Bars -->
+  <g transform="translate(390, 0)">
+    <rect x="0"  y="10" width="3" height="4" class="bar b1" />
+    <rect x="8"  y="10" width="3" height="4" class="bar b2" />
+    <rect x="16" y="10" width="3" height="4" class="bar b3" />
+    <rect x="24" y="10" width="3" height="4" class="bar b4" />
+    <rect x="32" y="10" width="3" height="4" class="bar b5" />
+    <rect x="40" y="10" width="3" height="4" class="bar b6" />
+    <rect x="48" y="10" width="3" height="4" class="bar b7" />
+    <rect x="56" y="10" width="3" height="4" class="bar b8" />
+    <rect x="64" y="10" width="3" height="4" class="bar b9" />
+  </g>
+
+  <!-- Right Accent Line -->
+  <line x1="475" y1="12" x2="840" y2="12" stroke="url(#lineRight)" stroke-width="1.5" />
+</svg>

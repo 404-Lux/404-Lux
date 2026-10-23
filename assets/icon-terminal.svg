@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none">
+  <rect x="2" y="3" width="20" height="18" rx="3" fill="#1a1426" stroke="#341b52" stroke-width="1.5" />
+  <rect x="2" y="3" width="20" height="5" fill="#241a36" />
+  <circle cx="5" cy="5.5" r="1" fill="#f7768e" />
+  <circle cx="8" cy="5.5" r="1" fill="#e0af68" />
+  <circle cx="11" cy="5.5" r="1" fill="#73daca" />
+  <!-- Prompt Symbol >_ -->
+  <path d="M 6 12 L 9 14.5 L 6 17" stroke="#ff9e64" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+  <line x1="12" y1="17" x2="16" y2="17" stroke="#bb9af7" stroke-width="1.8" stroke-linecap="round" />
+</svg>

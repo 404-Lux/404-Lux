@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 230" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1426" />
+      <stop offset="50%" stop-color="#231738" />
+      <stop offset="100%" stop-color="#130e1d" />
+    </linearGradient>
+
+    <!-- Ambient Glow Top-Left -->
+    <radialGradient id="glowPurple" cx="15%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#bb9af7" stop-opacity="0.22" />
+      <stop offset="100%" stop-color="#bb9af7" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Ambient Glow Bottom-Right -->
+    <radialGradient id="glowOrange" cx="85%" cy="75%" r="60%">
+      <stop offset="0%" stop-color="#ff9e64" stop-opacity="0.24" />
+      <stop offset="100%" stop-color="#ff9e64" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Scanline Pattern -->
+    <pattern id="scanlines" width="100%" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="860" y2="0" stroke="#000000" stroke-opacity="0.25" stroke-width="1.5" />
+    </pattern>
+
+    <style>
+      .mono { font-family: ui-monospace, 'JetBrains Mono', 'Fira Code', 'Courier New', monospace; }
+      
+      /* Glitch Keyframes */
+      @keyframes glitchRed {
+        0%, 100% { transform: translate(0, 0); opacity: 0.85; }
+        20% { transform: translate(-3px, 1.5px); opacity: 0.95; }
+        40% { transform: translate(-2px, -1.5px); opacity: 0.75; }
+        60% { transform: translate(3px, 1px); opacity: 0.9; }
+        80% { transform: translate(1px, -2px); opacity: 0.8; }
+      }
+
+      @keyframes glitchCyan {
+        0%, 100% { transform: translate(0, 0); opacity: 0.85; }
+        20% { transform: translate(3px, -1.5px); opacity: 0.95; }
+        40% { transform: translate(2px, 1.5px); opacity: 0.75; }
+        60% { transform: translate(-3px, -1px); opacity: 0.9; }
+        80% { transform: translate(-1px, 2px); opacity: 0.8; }
+      }
+
+      @keyframes cursorBlink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+
+      @keyframes floatNote1 {
+        0% { transform: translateY(0px) rotate(0deg); opacity: 0.2; }
+        50% { transform: translateY(-12px) rotate(8deg); opacity: 0.8; }
+        100% { transform: translateY(0px) rotate(0deg); opacity: 0.2; }
+      }
+
+      @keyframes floatNote2 {
+        0% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+        50% { transform: translateY(-16px) rotate(-10deg); opacity: 0.9; }
+        100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+      }
+
+      .glitch-layer-red {
+        animation: glitchRed 2.8s infinite steps(2, start);
+      }
+      .glitch-layer-cyan {
+        animation: glitchCyan 2.4s infinite steps(2, start);
+      }
+      .cursor {
+        animation: cursorBlink 0.9s infinite;
+      }
+      .note-1 {
+        animation: floatNote1 4s ease-in-out infinite;
+      }
+      .note-2 {
+        animation: floatNote2 4.6s ease-in-out infinite 0.8s;
+      }
+    </style>
+  </defs>
+
+  <!-- Outer Rounded Shell -->
+  <rect x="1" y="1" width="858" height="228" rx="14" fill="url(#bgGrad)" stroke="#341b52" stroke-width="2" />
+
+  <!-- Ambient Glow Overlays -->
+  <rect x="0" y="0" width="860" height="230" rx="14" fill="url(#glowPurple)" />
+  <rect x="0" y="0" width="860" height="230" rx="14" fill="url(#glowOrange)" />
+
+  <!-- CRT Scanlines -->
+  <rect x="0" y="0" width="860" height="230" rx="14" fill="url(#scanlines)" pointer-events="none" />
+
+  <!-- Terminal Titlebar -->
+  <path d="M 1 14 Q 1 1 14 1 L 846 1 Q 859 1 859 14 L 859 36 L 1 36 Z" fill="#241a36" />
+  <line x1="1" y1="36" x2="859" y2="36" stroke="#341b52" stroke-width="1.5" />
+
+  <!-- Window Dots -->
+  <circle cx="24" cy="19" r="5" fill="#f7768e" />
+  <circle cx="40" cy="19" r="5" fill="#e0af68" />
+  <circle cx="56" cy="19" r="5" fill="#73daca" />
+
+  <!-- Window Path Title -->
+  <text x="76" y="23" fill="#a79cb8" class="mono" font-size="12" letter-spacing="0.5">lux@cozy-box: ~/404-not-found (zsh)</text>
+  
+  <!-- Right Status Pill -->
+  <rect x="715" y="10" width="130" height="18" rx="4" fill="#1a1426" stroke="#5a4875" stroke-width="1" />
+  <circle cx="727" cy="19" r="3.5" fill="#73daca" />
+  <text x="736" y="23" fill="#fff3e6" class="mono" font-size="10" font-weight="600" letter-spacing="0.5">SIGNAL: ACTIVE</text>
+
+  <!-- Main Headline - GLITCH LAYERS -->
+  <!-- Layer 1: Orange Offset -->
+  <g class="glitch-layer-red" fill="#ff9e64">
+    <text x="46" y="112" class="mono" font-size="44" font-weight="800" letter-spacing="1.5">404: LUX NOT FOUND</text>
+  </g>
+  <!-- Layer 2: Purple Offset -->
+  <g class="glitch-layer-cyan" fill="#bb9af7">
+    <text x="44" y="110" class="mono" font-size="44" font-weight="800" letter-spacing="1.5">404: LUX NOT FOUND</text>
+  </g>
+  <!-- Layer 3: Main Crisp Cream Text -->
+  <text x="45" y="111" fill="#fff3e6" class="mono" font-size="44" font-weight="800" letter-spacing="1.5">404: LUX NOT FOUND</text>
+
+  <!-- Subtitle Line with Cursor -->
+  <g class="mono">
+    <text x="46" y="150" fill="#bb9af7" font-size="15" font-weight="500" letter-spacing="0.8">
+      STATUS: AT WORKSTATION <tspan fill="#ff9e64">▸</tspan> REACT • NEXT.JS • TYPESCRIPT
+    </text>
+    <text x="46" y="180" fill="#a79cb8" font-size="13" letter-spacing="0.5">
+      &gt; headphones on, lo-fi beats playing, cold cola at desk<tspan fill="#ff9e64" class="cursor">█</tspan>
+    </text>
+  </g>
+
+  <!-- Floating Music Note Glyphs -->
+  <g class="note-1" fill="#bb9af7" font-size="22" font-family="serif">
+    <text x="590" y="90">♪</text>
+  </g>
+  <g class="note-2" fill="#ff9e64" font-size="20" font-family="serif">
+    <text x="635" y="145">♫</text>
+  </g>
+  <g class="note-1" fill="#fff3e6" font-size="16" font-family="serif" opacity="0.6">
+    <text x="660" y="75">✦</text>
+  </g>
+
+  <!-- Right Pixel Cat Silhouette with Headphones & Cola Art -->
+  <g transform="translate(690, 68)">
+    <!-- Base Desk Shadow -->
+    <ellipse cx="65" cy="130" rx="48" ry="8" fill="#130e1d" opacity="0.8" />
+    
+    <!-- Cat Ears -->
+    <polygon points="36,44 48,18 60,38" fill="#ff9e64" />
+    <polygon points="40,40 48,24 56,38" fill="#341b52" />
+    <polygon points="70,38 82,18 94,44" fill="#ff9e64" />
+    <polygon points="74,38 82,24 90,40" fill="#341b52" />
+
+    <!-- Cat Head -->
+    <rect x="36" y="36" width="58" height="46" rx="14" fill="#ff9e64" />
+    
+    <!-- Eyes (closed cozy happy squint: ^^) -->
+    <path d="M 47 56 Q 52 50 57 56" stroke="#1a1426" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    <path d="M 73 56 Q 78 50 83 56" stroke="#1a1426" stroke-width="2.5" fill="none" stroke-linecap="round" />
+    
+    <!-- Nose & Mouth :3 -->
+    <polygon points="65,62 62,60 68,60" fill="#341b52" />
+    <path d="M 61 64 Q 65 67 65 64 Q 65 67 69 64" stroke="#1a1426" stroke-width="2" fill="none" />
+
+    <!-- Cat Body -->
+    <rect x="42" y="78" width="46" height="44" rx="10" fill="#ff9e64" />
+    <rect x="52" y="86" width="26" height="30" rx="6" fill="#fff3e6" opacity="0.85" />
+
+    <!-- Headphones Band -->
+    <path d="M 28 50 A 37 37 0 0 1 102 50" stroke="#bb9af7" stroke-width="5" fill="none" stroke-linecap="round" />
+    <!-- Headphone Earcups -->
+    <rect x="22" y="44" width="10" height="22" rx="4" fill="#bb9af7" stroke="#1a1426" stroke-width="1.5" />
+    <rect x="98" y="44" width="10" height="22" rx="4" fill="#bb9af7" stroke="#1a1426" stroke-width="1.5" />
+
+    <!-- Cola Can with Straw -->
+    <g transform="translate(94, 82)">
+      <line x1="8" y1="2" x2="16" y2="-12" stroke="#fff3e6" stroke-width="2.5" stroke-linecap="round" />
+      <line x1="16" y1="-12" x2="22" y2="-10" stroke="#fff3e6" stroke-width="2.5" stroke-linecap="round" />
+      <rect x="0" y="0" width="16" height="30" rx="3" fill="#f7768e" stroke="#341b52" stroke-width="1.2" />
+      <rect x="2" y="8" width="12" height="14" fill="#ff9e64" opacity="0.9" />
+      <text x="4" y="18" fill="#1a1426" font-size="8" font-weight="900" class="mono">C</text>
+    </g>
+  </g>
+</svg>
