@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 415 180" width="100%" height="100%">
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, 'JetBrains Mono', Consolas, monospace; }
+
+      @keyframes dashAnim {
+        0% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: 24; }
+      }
+      .card-shell {
+        stroke-dasharray: 6 4;
+        animation: dashAnim 4s linear infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Shell (Dashed) -->
+  <rect x="1" y="1" width="413" height="178" rx="10" fill="#231a33" stroke="#bb9af7" stroke-width="1.5" class="card-shell" />
+  
+  <!-- Titlebar -->
+  <path d="M 1 10 Q 1 1 10 1 L 405 1 Q 414 1 414 10 L 414 30 L 1 30 Z" fill="#1d152b" />
+  <line x1="1" y1="30" x2="414" y2="30" stroke="#341b52" stroke-width="1" />
+  
+  <circle cx="16" cy="15.5" r="3.5" fill="#f7768e" />
+  <circle cx="26" cy="15.5" r="3.5" fill="#e0af68" />
+  <circle cx="36" cy="15.5" r="3.5" fill="#73daca" />
+  <text x="48" y="19" fill="#a79cb8" class="mono" font-size="10.5">catalog: all_repos</text>
+  <text x="340" y="19" fill="#73daca" class="mono" font-size="10">[INDEX]</text>
+
+  <!-- Project Name -->
+  <text x="20" y="58" fill="#fff3e6" class="mono" font-size="15" font-weight="700">ls -a all_repositories</text>
+
+  <!-- Project Description -->
+  <text x="20" y="82" fill="#fff3e6" class="mono" font-size="11">Browse complete catalog of open-source projects,</text>
+  <text x="20" y="100" fill="#a79cb8" class="mono" font-size="11">experiments, and components under 404-Lux.</text>
+
+  <!-- Language Chips -->
+  <g transform="translate(20, 126)">
+    <rect x="0" y="0" width="60" height="20" rx="4" fill="#171024" stroke="#341b52" stroke-width="1" />
+    <text x="30" y="13.5" fill="#73daca" class="mono" font-size="9.5" text-anchor="middle">GitHub</text>
+
+    <rect x="68" y="0" width="86" height="20" rx="4" fill="#171024" stroke="#341b52" stroke-width="1" />
+    <text x="111" y="13.5" fill="#73daca" class="mono" font-size="9.5" text-anchor="middle">Open Source</text>
+  </g>
+
+  <!-- Open Repo Button -->
+  <g transform="translate(290, 126)">
+    <rect x="0" y="0" width="105" height="22" rx="4" fill="#73daca" />
+    <text x="52" y="15" fill="#1a1426" class="mono" font-size="10" font-weight="700" text-anchor="middle">VIEW ALL ↗</text>
+  </g>
+</svg>

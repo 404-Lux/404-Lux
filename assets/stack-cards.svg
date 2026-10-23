@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 230" width="100%" height="100%">
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, 'JetBrains Mono', Consolas, monospace; }
+      
+      @keyframes barPulse {
+        0%, 100% { opacity: 0.9; }
+        50% { opacity: 1; filter: drop-shadow(0 0 3px #ff9e64); }
+      }
+
+      .p-bar { animation: barPulse 3s ease-in-out infinite; }
+      .c1 { fill: #bb9af7; }
+      .c2 { fill: #ff9e64; }
+      .c3 { fill: #73daca; }
+    </style>
+  </defs>
+
+  <!-- COLUMN 1: LANGUAGES -->
+  <g transform="translate(0, 0)">
+    <rect x="1" y="1" width="276" height="228" rx="8" fill="#231a33" stroke="#341b52" stroke-width="1.5" />
+    <path d="M 1 8 Q 1 1 8 1 L 270 1 Q 277 1 277 8 L 277 28 L 1 28 Z" fill="#1d152b" />
+    <circle cx="12" cy="14.5" r="3.5" fill="#f7768e" />
+    <circle cx="22" cy="14.5" r="3.5" fill="#e0af68" />
+    <circle cx="32" cy="14.5" r="3.5" fill="#73daca" />
+    <text x="44" y="18" fill="#ff9e64" class="mono" font-size="10.5" font-weight="700">languages.ts</text>
+
+    <!-- Item 1: TypeScript -->
+    <text x="16" y="54" fill="#fff3e6" class="mono" font-size="11" font-weight="600">TypeScript</text>
+    <text x="228" y="54" fill="#a79cb8" class="mono" font-size="9.5">90%</text>
+    <rect x="16" y="60" width="244" height="6" rx="3" fill="#150f21" />
+    <rect x="16" y="60" width="220" height="6" rx="3" fill="#bb9af7" class="p-bar" />
+
+    <!-- Item 2: JavaScript -->
+    <text x="16" y="94" fill="#fff3e6" class="mono" font-size="11" font-weight="600">JavaScript (ES6+)</text>
+    <text x="228" y="94" fill="#a79cb8" class="mono" font-size="9.5">95%</text>
+    <rect x="16" y="100" width="244" height="6" rx="3" fill="#150f21" />
+    <rect x="16" y="100" width="232" height="6" rx="3" fill="#ff9e64" class="p-bar" />
+
+    <!-- Item 3: HTML5 -->
+    <text x="16" y="134" fill="#fff3e6" class="mono" font-size="11" font-weight="600">HTML5 Semantic</text>
+    <text x="228" y="134" fill="#a79cb8" class="mono" font-size="9.5">95%</text>
+    <rect x="16" y="140" width="244" height="6" rx="3" fill="#150f21" />
+    <rect x="16" y="140" width="232" height="6" rx="3" fill="#bb9af7" class="p-bar" />
+
+    <!-- Item 4: CSS3 -->
+    <text x="16" y="174" fill="#fff3e6" class="mono" font-size="11" font-weight="600">CSS3 Grid &amp; Flex</text>
+    <text x="228" y="174" fill="#a79cb8" class="mono" font-size="9.5">90%</text>
+    <rect x="16" y="180" width="244" height="6" rx="3" fill="#150f21" />
+    <rect x="16" y="180" width="220" height="6" rx="3" fill="#ff9e64" class="p-bar" />
+  </g>
+
+  <!-- COLUMN 2: FRAMEWORKS & STYLING -->
+  <g transform="translate(292, 0)">
+    <rect x="1" y="1" width="276" height="228" rx="8" fill="#231a33" stroke="#341b52" stroke-width="1.5" />
+    <path d="M 1 8 Q 1 1 8 1 L 270 1 Q 277 1 277 8 L 277 28 L 1 28 Z" fill="#1d152b" />
+    <circle cx="12" cy="14.5" r="3.5" fill="#f7768e" />
+    <circle cx="22" cy="14.5" r="3.5" fill="#e0af68" />
+    <circle cx="32" cy="14.5" r="3.5" fill="#73daca" />
+    <text x="44" y="18" fill="#bb9af7" class="mono" font-size="10.5" font-weight="700">frameworks.jsx</text>
+
+    <!-- Item 1: React.js -->
+    <text x="16" y="54" fill="#fff3e6" class="mono" font-size="11" font-weight="600">React.js</text>
+    <text x="228" y="54" fill="#a79cb8" class="mono" font-size="9.5">88%</text>
+    <rect x="16" y="60" width="244" height="6" rx="3" fill="#150f21" />
+    <rect x="16" y="60" width="215" height="6" rx="3" fill="#ff9e64" class="p-bar" />
+
+    <!-- Item 2: Next.js -->
+    <text x="16" y="94" fill="#fff3e6" class="mono" font-size="11" font-weight="600">Next.js App Router</text>
+    <text x="228" y="94" fill="#a79cb8" class="mono" font-size="9.5">82%</text>
+    <rect x="16" y="100" width="244" height="6" rx="3" fill="#150f21" />
+    <rect x="16" y="100" width="200" height="6" rx="3" fill="#bb9af7" class="p-bar" />
+
+    <!-- Item 3: Tailwind CSS -->
+    <text x="16" y="134" fill="#fff3e6" class="mono" font-size="11" font-weight="600">Tailwind CSS</text>
+    <text x="228" y="134" fill="#a79cb8" class="mono" font-size="9.5">90%</text>
+    <rect x="16" y="140" width="244" height="6" rx="3" fill="#150f21" />
+    <rect x="16" y="140" width="220" height="6" rx="3" fill="#ff9e64" class="p-bar" />
+
+    <!-- Item 4: Responsive UI -->
+    <text x="16" y="174" fill="#fff3e6" class="mono" font-size="11" font-weight="600">Mobile-First UI</text>
+    <text x="228" y="174" fill="#a79cb8" class="mono" font-size="9.5">92%</text>
+    <rect x="16" y="180" width="244" height="6" rx="3" fill="#150f21" />
+    <rect x="16" y="180" width="225" height="6" rx="3" fill="#bb9af7" class="p-bar" />
+  </g>
+
+  <!-- COLUMN 3: TOOLING & WORKFLOW -->
+  <g transform="translate(584, 0)">
+    <rect x="1" y="1" width="276" height="228" rx="8" fill="#231a33" stroke="#341b52" stroke-width="1.5" />
+    <path d="M 1 8 Q 1 1 8 1 L 270 1 Q 277 1 277 8 L 277 28 L 1 28 Z" fill="#1d152b" />
+    <circle cx="12" cy="14.5" r="3.5" fill="#f7768e" />
+    <circle cx="22" cy="14.5" r="3.5" fill="#e0af68" />
+    <circle cx="32" cy="14.5" r="3.5" fill="#73daca" />
+    <text x="44" y="18" fill="#73daca" class="mono" font-size="10.5" font-weight="700">tooling.sh</text>
+
+    <!-- Item 1: Git & GitHub -->
+    <text x="16" y="54" fill="#fff3e6" class="mono" font-size="11" font-weight="600">Git &amp; GitHub</text>
+    <text x="228" y="54" fill="#a79cb8" class="mono" font-size="9.5">90%</text>
+    <rect x="16" y="60" width="244" height="6" rx="3" fill="#150f21" />
+    <rect x="16" y="60" width="220" height="6" rx="3" fill="#bb9af7" class="p-bar" />
+
+    <!-- Item 2: VS Code -->
+    <text x="16" y="94" fill="#fff3e6" class="mono" font-size="11" font-weight="600">VS Code Environment</text>
+    <text x="228" y="94" fill="#a79cb8" class="mono" font-size="9.5">95%</text>
+    <rect x="16" y="100" width="244" height="6" rx="3" fill="#150f21" />
+    <rect x="16" y="100" width="232" height="6" rx="3" fill="#ff9e64" class="p-bar" />
+
+    <!-- Item 3: Terminal Scripting -->
+    <text x="16" y="134" fill="#fff3e6" class="mono" font-size="11" font-weight="600">Zsh / Shell</text>
+    <text x="228" y="134" fill="#a79cb8" class="mono" font-size="9.5">85%</text>
+    <rect x="16" y="140" width="244" height="6" rx="3" fill="#150f21" />
+    <rect x="16" y="140" width="207" height="6" rx="3" fill="#bb9af7" class="p-bar" />
+
+    <!-- Item 4: Lo-Fi Focus -->
+    <text x="16" y="174" fill="#fff3e6" class="mono" font-size="11" font-weight="600">Focus &amp; Chill Beats</text>
+    <text x="222" y="174" fill="#73daca" class="mono" font-size="9.5">100%</text>
+    <rect x="16" y="180" width="244" height="6" rx="3" fill="#150f21" />
+    <rect x="16" y="180" width="244" height="6" rx="3" fill="#73daca" class="p-bar" />
+  </g>
+</svg>

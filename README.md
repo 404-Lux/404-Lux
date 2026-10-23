@@ -35,125 +35,113 @@
   <img src="assets/divider.svg" width="100%" alt="Lo-Fi Equalizer Divider" />
 </p>
 
-<!-- SECTION 1: ABOUT -->
+<!-- =========================================================================
+     SECTION 1: ABOUT
+     ========================================================================= -->
 <p align="center">
-  <img src="assets/header-about.svg" width="100%" alt="About Section Header" />
+  <img src="assets/header-about.svg" width="100%" alt="About Section Header: ~/about.sh" />
 </p>
 
-```text
-┌──(lux㉿cozy-box)-[~]
-└─$ whoami
-LUX (404-Lux) ▸ Frontend & Web Developer ▸ Focus: React, Next.js & TypeScript
-
-┌──(lux㉿cozy-box)-[~]
-└─$ cat about.txt
-Hey there. I'm LUX. I build modern, high-performance web interfaces
-using HTML, CSS, JavaScript, TypeScript, React, and Next.js.
-When headphones are on, I'm turning ideas into clean code, solving UI
-challenges, and listening to lo-fi beats with ice-cold Coca-Cola at hand.
-```
-
-▸ **audio_stream:** Lo-Fi beats 24/7  
-▸ **daily_fuel:** Cold Coca-Cola & curiosity  
-▸ **core_stack:** React, Next.js, TypeScript, JavaScript, HTML5, CSS3  
-▸ **mascot_vibe:** Orange tabby cat wearing headphones at workstation  
-▸ **contact_query:** React/Next.js builds, frontend architecture, or lo-fi playlists  
+<!-- Side-by-Side: Animated Typing Terminal Window + Cat Mascot Card -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none;">
+  <tr>
+    <td width="66%" valign="top" style="border: none; padding-right: 8px;">
+      <img src="assets/about-terminal.svg" width="100%" alt="Animated Typing Terminal Window" />
+    </td>
+    <td width="34%" valign="top" style="border: none; padding-left: 8px;">
+      <img src="assets/cat-mascot.svg" width="100%" alt="Animated Orange Tabby Cat Mascot with Bobbing Headphones" />
+    </td>
+  </tr>
+</table>
 
 <br />
 
-<!-- NOW PLAYING TERMINAL WIDGET -->
-```text
-┌──(lux㉿cozy-box)-[~]
-└─$ player --now-playing
-[⏵] Lo-Fi Coding Session #404 (Chill Cat Beats)
-    ████████████████░░░░░░░░░░░░ 02:40 / 04:04
-    Track: Midnight Cola & Chill Chords  |  Status: Looping
-```
+<!-- 4 Key Info Metric Cards -->
+<p align="center">
+  <img src="assets/about-cards.svg" width="100%" alt="System Info Cards: Audio Stream, Daily Fuel, Core Stack, Mascot Vibe" />
+</p>
 
 <p align="center">
   <img src="assets/divider.svg" width="100%" alt="Lo-Fi Equalizer Divider" />
 </p>
 
-<!-- SECTION 2: TECH STACK -->
+<!-- =========================================================================
+     SECTION 2: NOW PLAYING LO-FI MUSIC BAR
+     ========================================================================= -->
 <p align="center">
-  <img src="assets/header-stack.svg" width="100%" alt="Tech Stack Header" />
+  <img src="assets/player.svg" width="100%" alt="Lo-Fi Music Player: Midnight Cola &amp; Chill Chords" />
 </p>
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,tailwind,git,github,vscode&perline=10" alt="Skill Icons" />
-</p>
-
-<details>
-<summary><b>▸ [CLICK TO EXPAND] View Categorized Tech Arsenal</b></summary>
-<br />
-
-```json
-{
-  "developer": "LUX",
-  "handle": "404-Lux",
-  "technologies": {
-    "languages": ["HTML5", "CSS3", "JavaScript (ES6+)", "TypeScript"],
-    "frameworks_and_styling": ["React.js", "Next.js", "Tailwind CSS"],
-    "tooling_and_workflow": ["Git", "GitHub", "VS Code", "Terminal (Bash/Zsh)"]
-  },
-  "environment": "Lo-Fi Focus, Midnight Coffee & Coca-Cola"
-}
-```
-
-</details>
 
 <p align="center">
   <img src="assets/divider.svg" width="100%" alt="Lo-Fi Equalizer Divider" />
 </p>
 
-<!-- SECTION 3: PROJECTS -->
+<!-- =========================================================================
+     SECTION 3: TECH ARSENAL & SKILLS
+     ========================================================================= -->
 <p align="center">
-  <img src="assets/header-projects.svg" width="100%" alt="Projects Header" />
+  <img src="assets/header-stack.svg" width="100%" alt="Tech Arsenal Header: ~/stack.json" />
 </p>
 
-<details open>
-<summary><b>▸ OJT-Time-Tracker</b> <code>[HTML / CSS / JavaScript]</code></summary>
-<br />
-
-> **Repository:** [github.com/404-Lux/OJT-Time-Tracker](https://github.com/404-Lux/OJT-Time-Tracker)  
-> **Description:** A streamlined, intuitive time and attendance tracking web application built to log on-the-job training hours and progress with clean local state handling.  
-> **Stack:** `HTML5` `CSS3` `JavaScript`
-
-</details>
+<!-- Skill Icons -->
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,tailwind,git,github,vscode&perline=10" alt="Skill Icons Row" />
+</div>
 
 <br />
+
+<!-- 3-Column Mini Terminal Cards with Animated Level Bars -->
+<p align="center">
+  <img src="assets/stack-cards.svg" width="100%" alt="Tech Arsenal Categories: Languages, Frameworks, Tooling" />
+</p>
+
+<p align="center">
+  <img src="assets/divider.svg" width="100%" alt="Lo-Fi Equalizer Divider" />
+</p>
+
+<!-- =========================================================================
+     SECTION 4: FEATURED BUILDS & REPOSITORIES
+     ========================================================================= -->
+<p align="center">
+  <img src="assets/header-projects.svg" width="100%" alt="Projects Header: ~/projects" />
+</p>
+
+<!-- 2-Column Responsive Project Grid -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none;">
+  <tr>
+    <td width="50%" valign="top" style="border: none; padding: 6px;">
+      <a href="https://github.com/404-Lux/OJT-Time-Tracker">
+        <img src="assets/card-ojt.svg" width="100%" alt="OJT-Time-Tracker Repository Card" />
+      </a>
+    </td>
+    <td width="50%" valign="top" style="border: none; padding: 6px;">
+      <a href="https://github.com/404-Lux/Lauryn-and-Littles">
+        <img src="assets/card-lauryn.svg" width="100%" alt="Lauryn-and-Littles Repository Card" />
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top" style="border: none; padding: 6px;">
+      <a href="https://github.com/404-Lux/tapkonek-harra">
+        <img src="assets/card-tapkonek.svg" width="100%" alt="tapkonek-harra Repository Card" />
+      </a>
+    </td>
+    <td width="50%" valign="top" style="border: none; padding: 6px;">
+      <a href="https://github.com/404-Lux?tab=repositories">
+        <img src="assets/card-repos.svg" width="100%" alt="All Repositories Catalog Card" />
+      </a>
+    </td>
+  </tr>
+</table>
 
 <details>
-<summary><b>▸ Lauryn-and-Littles</b> <code>[HTML / Responsive Showcase]</code></summary>
+<summary><b>▸ [CLICK FOR TEXT ACCESS] Project Accessibility Links &amp; Details</b></summary>
 <br />
 
-> **Repository:** [github.com/404-Lux/Lauryn-and-Littles](https://github.com/404-Lux/Lauryn-and-Littles)  
-> **Description:** A responsive, aesthetic web showcase project designed with semantic HTML markup, custom layout styling, and delightful micro-interactions.  
-> **Stack:** `HTML5` `CSS3` `Responsive UI`
-
-</details>
-
-<br />
-
-<details>
-<summary><b>▸ tapkonek-harra</b> <code>[Web Application]</code></summary>
-<br />
-
-> **Repository:** [github.com/404-Lux/tapkonek-harra](https://github.com/404-Lux/tapkonek-harra)  
-> **Description:** [EDIT ME: Add 1-sentence description of tapkonek-harra project features and purpose].  
-> **Stack:** `JavaScript` `HTML5` `CSS3`
-
-</details>
-
-<br />
-
-<details>
-<summary><b>▸ ls -a all_repositories</b> <code>[GitHub Catalog]</code></summary>
-<br />
-
-> **Repository Index:** [github.com/404-Lux?tab=repositories](https://github.com/404-Lux?tab=repositories)  
-> **Description:** Browse all open-source repositories, components, and ongoing experiments under the 404-Lux workspace.  
-> **Command:** `$ gh repo list 404-Lux --public`
+* **[OJT-Time-Tracker](https://github.com/404-Lux/OJT-Time-Tracker)**: Streamlined time and attendance tracking web application built to log on-the-job training hours with local state handling (`HTML5`, `CSS3`, `JavaScript`).
+* **[Lauryn-and-Littles](https://github.com/404-Lux/Lauryn-and-Littles)**: Responsive web showcase project crafted with semantic markup and tailored styling (`HTML5`, `CSS3`, `Responsive UI`).
+* **[tapkonek-harra](https://github.com/404-Lux/tapkonek-harra)**: Interactive web application project and frontend utilities architecture (`JavaScript`, `HTML5`, `CSS3`).
+* **[All Repositories](https://github.com/404-Lux?tab=repositories)**: Complete open-source index under the 404-Lux catalog.
 
 </details>
 
@@ -161,9 +149,11 @@ challenges, and listening to lo-fi beats with ice-cold Coca-Cola at hand.
   <img src="assets/divider.svg" width="100%" alt="Lo-Fi Equalizer Divider" />
 </p>
 
-<!-- SECTION 4: STATS & ACTIVITY -->
+<!-- =========================================================================
+     SECTION 5: STATS & CONTRIBUTION METRICS
+     ========================================================================= -->
 <p align="center">
-  <img src="assets/header-stats.svg" width="100%" alt="Stats Header" />
+  <img src="assets/header-stats.svg" width="100%" alt="Metrics Header: ~/stats.log" />
 </p>
 
 <div align="center">
@@ -179,33 +169,41 @@ challenges, and listening to lo-fi beats with ice-cold Coca-Cola at hand.
   <!-- Top Languages Card -->
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=404-Lux&layout=compact&hide_border=true&bg_color=1a1426&title_color=bb9af7&text_color=fff3e6" height="150" alt="Top Languages" />
 
-  <br /><br />
+</div>
 
-  <!-- Contribution Grid Snake Animation (Workflow Output) -->
-  <img src="https://raw.githubusercontent.com/404-Lux/404-Lux/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Contribution Snake Animation" />
+<br />
 
+<!-- Snake Contribution Titlebar & Animation -->
+<p align="center">
+  <img src="assets/header-snake.svg" width="100%" alt="Snake Activity Header: ~/snake.log" />
+</p>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/404-Lux/404-Lux/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Contribution Grid Snake Animation" />
 </div>
 
 <p align="center">
   <img src="assets/divider.svg" width="100%" alt="Lo-Fi Equalizer Divider" />
 </p>
 
-<!-- SECTION 5: CONNECT -->
+<!-- =========================================================================
+     SECTION 6: CONNECT & NETWORK
+     ========================================================================= -->
 <p align="center">
-  <img src="assets/header-connect.svg" width="100%" alt="Connect Header" />
+  <img src="assets/header-connect.svg" width="100%" alt="Connect Header: ~/connect" />
 </p>
 
 <p align="center">
   <a href="mailto:lux@example.com">
-    <img src="https://img.shields.io/badge/EMAIL-LUX%40EXAMPLE.COM-ff9e64?style=for-the-badge&logo=mail.ru&logoColor=1a1426" alt="Email" />
+    <img src="assets/btn-email.svg" width="240" alt="Email Button" />
   </a>
   &nbsp;
   <a href="https://github.com/404-Lux">
-    <img src="https://img.shields.io/badge/GITHUB-404--LUX-bb9af7?style=for-the-badge&logo=github&logoColor=1a1426" alt="GitHub" />
+    <img src="assets/btn-github.svg" width="240" alt="GitHub Button" />
   </a>
   &nbsp;
   <a href="https://linkedin.com/in/404-lux">
-    <img src="https://img.shields.io/badge/LINKEDIN-CONNECT-ff9e64?style=for-the-badge&logo=linkedin&logoColor=1a1426" alt="LinkedIn" />
+    <img src="assets/btn-linkedin.svg" width="240" alt="LinkedIn Button" />
   </a>
 </p>
 

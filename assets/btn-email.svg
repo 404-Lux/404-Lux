@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 50" width="250" height="50">
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, 'JetBrains Mono', Consolas, monospace; }
+      @keyframes pulseGlow {
+        0%, 100% { stroke: #341b52; }
+        50% { stroke: #ff9e64; }
+      }
+      .btn-shell { animation: pulseGlow 3s ease-in-out infinite; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="248" height="48" rx="8" fill="#231a33" stroke="#341b52" stroke-width="1.5" class="btn-shell" />
+  
+  <!-- Mail Pixel Icon -->
+  <g transform="translate(24, 16)">
+    <rect x="0" y="0" width="20" height="15" rx="2" fill="#1a1426" stroke="#ff9e64" stroke-width="1.2" />
+    <path d="M 1 2 L 10 9 L 19 2" stroke="#ff9e64" stroke-width="1.2" fill="none" />
+  </g>
+
+  <!-- Button Label -->
+  <text x="56" y="27" fill="#ff9e64" class="mono" font-size="11.5" font-weight="700" letter-spacing="1">EMAIL ME</text>
+  <text x="56" y="39" fill="#a79cb8" class="mono" font-size="9">lux@example.com</text>
+  <text x="226" y="30" fill="#bb9af7" class="mono" font-size="13">↗</text>
+</svg>

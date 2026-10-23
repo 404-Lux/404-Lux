@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 230" width="100%" height="100%">
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, 'JetBrains Mono', Consolas, monospace; }
+
+      @keyframes headBob {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+      }
+
+      @keyframes eyeBlink {
+        0%, 94%, 100% { transform: scaleY(1); }
+        96% { transform: scaleY(0.1); }
+      }
+
+      @keyframes pulseNote {
+        0%, 100% { transform: translateY(0) scale(0.9); opacity: 0.3; }
+        50% { transform: translateY(-8px) scale(1.1); opacity: 0.85; }
+      }
+
+      .bobbing-head {
+        animation: headBob 1.8s ease-in-out infinite;
+        transform-origin: 140px 120px;
+      }
+      .cat-eyes {
+        animation: eyeBlink 4s ease-in-out infinite;
+        transform-origin: 140px 92px;
+      }
+      .note-anim-1 { animation: pulseNote 2.4s ease-in-out infinite; }
+      .note-anim-2 { animation: pulseNote 2.8s ease-in-out infinite 0.7s; }
+    </style>
+  </defs>
+
+  <!-- Frame Shell -->
+  <rect x="1" y="1" width="278" height="228" rx="10" fill="#231a33" stroke="#341b52" stroke-width="1.5" />
+
+  <!-- Frame Titlebar -->
+  <path d="M 1 10 Q 1 1 10 1 L 270 1 Q 279 1 279 10 L 279 32 L 1 32 Z" fill="#1d152b" />
+  <line x1="1" y1="32" x2="279" y2="32" stroke="#341b52" stroke-width="1" />
+  
+  <circle cx="16" cy="16.5" r="4" fill="#f7768e" />
+  <circle cx="28" cy="16.5" r="4" fill="#e0af68" />
+  <circle cx="40" cy="16.5" r="4" fill="#73daca" />
+  <text x="54" y="20.5" fill="#a79cb8" class="mono" font-size="10.5">cat --mascot</text>
+
+  <!-- Floating Notes -->
+  <g class="note-anim-1" fill="#bb9af7" font-size="16" font-family="serif">
+    <text x="50" y="75">♪</text>
+  </g>
+  <g class="note-anim-2" fill="#ff9e64" font-size="14" font-family="serif">
+    <text x="220" y="70">♫</text>
+  </g>
+
+  <!-- Animated Cat Group -->
+  <g class="bobbing-head">
+    <!-- Desk Shadow -->
+    <ellipse cx="140" cy="160" rx="60" ry="8" fill="#150f21" />
+
+    <!-- Cat Body -->
+    <rect x="115" y="115" width="50" height="42" rx="12" fill="#ff9e64" />
+    <rect x="126" y="123" width="28" height="28" rx="6" fill="#fff3e6" opacity="0.85" />
+
+    <!-- Cat Ears -->
+    <polygon points="108,78 122,46 136,70" fill="#ff9e64" />
+    <polygon points="113,74 122,54 130,70" fill="#341b52" />
+    <polygon points="144,70 158,46 172,78" fill="#ff9e64" />
+    <polygon points="150,70 158,54 167,74" fill="#341b52" />
+
+    <!-- Cat Head -->
+    <rect x="105" y="68" width="70" height="52" rx="16" fill="#ff9e64" />
+
+    <!-- Blinking Eyes -->
+    <g class="cat-eyes">
+      <ellipse cx="123" cy="92" rx="4" ry="4" fill="#1a1426" />
+      <circle cx="124.5" cy="90.5" r="1.5" fill="#fff3e6" />
+      <ellipse cx="157" cy="92" rx="4" ry="4" fill="#1a1426" />
+      <circle cx="158.5" cy="90.5" r="1.5" fill="#fff3e6" />
+    </g>
+
+    <!-- Nose & Mouth :3 -->
+    <polygon points="140,99 137,96 143,96" fill="#341b52" />
+    <path d="M 134 102 Q 138 105 140 102 Q 142 105 146 102" stroke="#1a1426" stroke-width="1.8" fill="none" stroke-linecap="round" />
+
+    <!-- Purple Headphones Headband -->
+    <path d="M 97 85 A 43 43 0 0 1 183 85" stroke="#bb9af7" stroke-width="6" fill="none" stroke-linecap="round" />
+    <!-- Earcups -->
+    <rect x="91" y="78" width="12" height="24" rx="4" fill="#bb9af7" stroke="#1a1426" stroke-width="1.5" />
+    <rect x="177" y="78" width="12" height="24" rx="4" fill="#bb9af7" stroke="#1a1426" stroke-width="1.5" />
+
+    <!-- Cola Can Beside Cat -->
+    <g transform="translate(182, 122)">
+      <rect x="0" y="0" width="18" height="34" rx="3" fill="#f7768e" stroke="#1a1426" stroke-width="1.2" />
+      <rect x="2" y="8" width="14" height="16" fill="#ff9e64" opacity="0.9" />
+      <text x="4" y="20" fill="#1a1426" font-size="9" font-weight="900" class="mono">C</text>
+      <!-- Straw -->
+      <line x1="8" y1="0" x2="16" y2="-12" stroke="#fff3e6" stroke-width="2.5" stroke-linecap="round" />
+      <line x1="16" y1="-12" x2="22" y2="-10" stroke="#fff3e6" stroke-width="2.5" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- Status Tag Below -->
+  <rect x="42" y="188" width="196" height="24" rx="6" fill="#1a1426" stroke="#341b52" />
+  <text x="140" y="204" fill="#ff9e64" class="mono" font-size="10" font-weight="600" text-anchor="middle">STATUS: 404 SLEEP NOT FOUND</text>
+</svg>

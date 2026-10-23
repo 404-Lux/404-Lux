@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 50" width="250" height="50">
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, 'JetBrains Mono', Consolas, monospace; }
+      @keyframes pulseGlow {
+        0%, 100% { stroke: #341b52; }
+        50% { stroke: #bb9af7; }
+      }
+      .btn-shell { animation: pulseGlow 3.5s ease-in-out infinite 0.5s; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="248" height="48" rx="8" fill="#231a33" stroke="#341b52" stroke-width="1.5" class="btn-shell" />
+  
+  <!-- GitHub Octocat Silhouette Icon -->
+  <g transform="translate(24, 15)">
+    <circle cx="10" cy="10" r="9.5" fill="#1a1426" stroke="#bb9af7" stroke-width="1.2" />
+    <path d="M 10 3 C 6 3 3 6 3 10 C 3 13 5 15.8 8 16.8 C 8.3 16.8 8.4 16.6 8.4 16.4 L 8.4 14.8 C 6.5 15.2 6 14 6 14 C 5.6 13.2 5 13 5 13 C 4.4 12.6 5 12.6 5 12.6 C 5.7 12.6 6 13.4 6 13.4 C 6.6 14.4 7.6 14.1 8 14 C 8 13.5 8.2 13.2 8.4 13 C 6.8 12.8 5.2 12.2 5.2 9.5 C 5.2 8.7 5.5 8.1 6 7.6 C 5.9 7.4 5.6 6.7 6.1 5.7 C 6.1 5.7 6.7 5.5 8.2 6.5 C 8.8 6.3 9.4 6.2 10 6.2 C 10.6 6.2 11.2 6.3 11.8 6.5 C 13.3 5.5 13.9 5.7 13.9 5.7 C 14.4 6.7 14.1 7.4 14 7.6 C 14.5 8.1 14.8 8.7 14.8 9.5 C 14.8 12.2 13.2 12.8 11.6 13 C 11.8 13.2 12 13.7 12 14.3 L 12 16.4 C 12 16.6 12.1 16.8 12.4 16.8 C 15.4 15.8 17 13 17 10 C 17 6 14 3 10 3 Z" fill="#bb9af7" />
+  </g>
+
+  <text x="56" y="27" fill="#bb9af7" class="mono" font-size="11.5" font-weight="700" letter-spacing="1">GITHUB</text>
+  <text x="56" y="39" fill="#a79cb8" class="mono" font-size="9">@404-Lux</text>
+  <text x="226" y="30" fill="#ff9e64" class="mono" font-size="13">↗</text>
+</svg>

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 150" width="100%" height="100%">
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, 'JetBrains Mono', Consolas, monospace; }
+
+      @keyframes spinDisk {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      @keyframes playFill {
+        0% { width: 40px; }
+        50% { width: 340px; }
+        90% { width: 480px; }
+        100% { width: 40px; }
+      }
+
+      @keyframes barDance {
+        0%, 100% { height: 4px; y: 14px; }
+        50% { height: 18px; y: 0px; }
+      }
+
+      .spinning-tape {
+        animation: spinDisk 6s linear infinite;
+        transform-origin: 65px 90px;
+      }
+
+      .progress-bar-fill {
+        animation: playFill 16s ease-in-out infinite;
+      }
+
+      .eq1 { animation: barDance 0.8s ease-in-out infinite; }
+      .eq2 { animation: barDance 1.1s ease-in-out infinite 0.2s; }
+      .eq3 { animation: barDance 0.9s ease-in-out infinite 0.4s; }
+      .eq4 { animation: barDance 1.3s ease-in-out infinite 0.1s; }
+      .eq5 { animation: barDance 0.7s ease-in-out infinite 0.3s; }
+    </style>
+
+    <linearGradient id="progressGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bb9af7" />
+      <stop offset="100%" stop-color="#ff9e64" />
+    </linearGradient>
+  </defs>
+
+  <!-- Shell -->
+  <rect x="1" y="1" width="858" height="148" rx="10" fill="#231a33" stroke="#341b52" stroke-width="1.5" />
+
+  <!-- Titlebar -->
+  <path d="M 1 10 Q 1 1 10 1 L 850 1 Q 859 1 859 10 L 859 30 L 1 30 Z" fill="#1d152b" />
+  <line x1="1" y1="30" x2="859" y2="30" stroke="#341b52" stroke-width="1" />
+
+  <circle cx="16" cy="15.5" r="4" fill="#f7768e" />
+  <circle cx="28" cy="15.5" r="4" fill="#e0af68" />
+  <circle cx="40" cy="15.5" r="4" fill="#73daca" />
+  <text x="56" y="19.5" fill="#a79cb8" class="mono" font-size="11">player --now-playing (audio daemon)</text>
+  <text x="760" y="19.5" fill="#bb9af7" class="mono" font-size="10.5">[STEREO / 44.1kHz]</text>
+
+  <!-- Left: Spinning Vinyl / Cassette Spool -->
+  <g class="spinning-tape">
+    <!-- Vinyl Disc -->
+    <circle cx="65" cy="90" r="38" fill="#130e1d" stroke="#341b52" stroke-width="2" />
+    <circle cx="65" cy="90" r="31" fill="none" stroke="#231a33" stroke-width="1.5" />
+    <circle cx="65" cy="90" r="23" fill="none" stroke="#231a33" stroke-width="1.5" />
+    <!-- Label -->
+    <circle cx="65" cy="90" r="15" fill="#bb9af7" />
+    <circle cx="65" cy="90" r="5" fill="#130e1d" />
+    <!-- Little notch marker to visualize spinning -->
+    <rect x="63" y="75" width="4" height="6" fill="#ff9e64" />
+    <rect x="63" y="99" width="4" height="6" fill="#ff9e64" />
+  </g>
+
+  <!-- Center Content -->
+  <g transform="translate(130, 48)">
+    <!-- Track Title & Equalizer -->
+    <text x="0" y="18" fill="#fff3e6" class="mono" font-size="16" font-weight="700">Midnight Cola &amp; Chill Chords</text>
+    
+    <!-- Mini Equalizer in Header -->
+    <g transform="translate(330, 2)">
+      <rect x="0"  y="8" width="3" height="10" rx="1" fill="#ff9e64" class="eq1" />
+      <rect x="6"  y="4" width="3" height="14" rx="1" fill="#bb9af7" class="eq2" />
+      <rect x="12" y="6" width="3" height="12" rx="1" fill="#fff3e6" class="eq3" />
+      <rect x="18" y="2" width="3" height="16" rx="1" fill="#ff9e64" class="eq4" />
+      <rect x="24" y="9" width="3" height="9"  rx="1" fill="#bb9af7" class="eq5" />
+    </g>
+
+    <!-- Subtitle -->
+    <text x="0" y="38" fill="#a79cb8" class="mono" font-size="11.5">Lo-Fi Coding Session #404 ▸ Infinite Chill Beats</text>
+
+    <!-- Progress Rail -->
+    <rect x="0" y="52" width="530" height="6" rx="3" fill="#140f1d" stroke="#341b52" stroke-width="0.8" />
+    <!-- Animated Progress Fill -->
+    <rect x="0" y="52" width="280" height="6" rx="3" fill="url(#progressGrad)" class="progress-bar-fill" />
+
+    <!-- Progress Timestamps -->
+    <text x="0" y="74" fill="#bb9af7" class="mono" font-size="10.5" font-weight="600">02:40</text>
+    <text x="495" y="74" fill="#a79cb8" class="mono" font-size="10.5">04:04</text>
+  </g>
+
+  <!-- Right: Badges -->
+  <g transform="translate(720, 60)">
+    <rect x="0" y="0" width="112" height="26" rx="5" fill="#1a1426" stroke="#ff9e64" stroke-width="1" />
+    <text x="56" y="17" fill="#ff9e64" class="mono" font-size="11" font-weight="700" text-anchor="middle">⏵ PLAYING</text>
+
+    <text x="56" y="48" fill="#a79cb8" class="mono" font-size="10" text-anchor="middle">REPEAT: ON</text>
+    <text x="56" y="64" fill="#a79cb8" class="mono" font-size="10" text-anchor="middle">VOL: 100%</text>
+  </g>
+</svg>
