@@ -134,15 +134,15 @@
 <div align="center">
 
   <!-- GitHub Stats Card -->
-  <img src="https://github-readme-stats.vercel.app/api?username=404-Lux&show_icons=true&hide_border=true&bg_color=1a1426&title_color=ff9e64&icon_color=bb9af7&text_color=fff3e6" height="165" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api?username=404-Lux&show_icons=true&border_color=341b52&bg_color=1a1426&title_color=ff9e64&icon_color=bb9af7&text_color=fff3e6" height="165" alt="GitHub Stats" />
   &nbsp;
-  <!-- GitHub Streak Card (Reliable Demolab Endpoint) -->
-  <img src="https://streak-stats.demolab.com/?user=404-Lux&hide_border=true&background=1a1426&stroke=ff9e64&ring=bb9af7&fire=ff9e64&currStreakLabel=ff9e64&sideLabels=fff3e6&dates=bb9af7" height="165" alt="Streak Stats" />
+  <!-- GitHub Streak Card (Fixed Readable Numbers in Dark & Light Modes) -->
+  <img src="https://streak-stats.demolab.com/?user=404-Lux&border=341b52&background=1a1426&stroke=ff9e64&ring=bb9af7&fire=ff9e64&currStreakLabel=ff9e64&sideLabels=fff3e6&dates=bb9af7&sideNums=fff3e6&currStreakNum=fff3e6&disable_animations=true" height="165" alt="Streak Stats" />
 
   <br /><br />
 
   <!-- Top Languages Card -->
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=404-Lux&layout=compact&hide_border=true&bg_color=1a1426&title_color=bb9af7&text_color=fff3e6" height="150" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=404-Lux&layout=compact&border_color=341b52&bg_color=1a1426&title_color=bb9af7&text_color=fff3e6" height="150" alt="Top Languages" />
 
 </div>
 
@@ -154,7 +154,11 @@
 </p>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/404-Lux/404-Lux/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Contribution Grid Snake Animation" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/404-Lux/404-Lux/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/404-Lux/404-Lux/output/github-contribution-grid-snake.svg">
+    <img src="https://raw.githubusercontent.com/404-Lux/404-Lux/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Contribution Grid Snake Animation" />
+  </picture>
 </div>
 
 <p align="center">
