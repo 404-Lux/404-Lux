@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 250" width="100%" height="250">
+  <defs>
+    <style><![CDATA[
+      .mono { font-family: ui-monospace, 'JetBrains Mono', Consolas, monospace; }
+      
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      .cursor { animation: blink 0.8s infinite; }
+
+      @keyframes headBob {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-4px); }
+      }
+      .bobbing-head {
+        animation: headBob 1.8s ease-in-out infinite;
+        transform-origin: 717px 135px;
+      }
+
+      @keyframes eyeBlink {
+        0%, 93%, 100% { transform: scaleY(1); }
+        95%, 97% { transform: scaleY(0.1); }
+      }
+      .cat-eyes {
+        animation: eyeBlink 4s ease-in-out infinite;
+        transform-origin: 717px 104px;
+      }
+
+      @keyframes pulseNote {
+        0%, 100% { transform: translateY(0) scale(0.9); opacity: 0.35; }
+        50% { transform: translateY(-7px) scale(1.1); opacity: 0.9; }
+      }
+      .note-anim-1 { animation: pulseNote 2.4s ease-in-out infinite; }
+      .note-anim-2 { animation: pulseNote 2.8s ease-in-out infinite 0.7s; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .cursor, .bobbing-head, .cat-eyes, .note-anim-1, .note-anim-2 {
+          animation: none !important;
+        }
+      }
+    ]]></style>
+  </defs>
+
+  <!-- =========================================================================
+       LEFT PANEL: TERMINAL WINDOW (about 65% width)
+       ========================================================================= -->
+  <g id="terminal-panel">
+    <!-- Terminal Shell -->
+    <rect x="1" y="1" width="558" height="248" rx="10" fill="#231a33" stroke="#341b52" stroke-width="1.5" />
+    
+    <!-- Titlebar -->
+    <path d="M 1 10 Q 1 1 10 1 L 549 1 Q 559 1 559 10 L 559 32 L 1 32 Z" fill="#1d152b" />
+    <line x1="1" y1="32" x2="559" y2="32" stroke="#341b52" stroke-width="1" />
+    
+    <!-- Window Dots -->
+    <circle cx="16" cy="16.5" r="4" fill="#f7768e" />
+    <circle cx="28" cy="16.5" r="4" fill="#e0af68" />
+    <circle cx="40" cy="16.5" r="4" fill="#73daca" />
+    <text x="56" y="20.5" fill="#a79cb8" class="mono" font-size="11">lux@cozy-box: ~/about.sh</text>
+    <text x="495" y="20.5" fill="#bb9af7" class="mono" font-size="10">[zsh]</text>
+
+    <!-- Terminal Content (Always 100% visible, never blank) -->
+    <!-- Line 1: Command whoami -->
+    <g class="mono">
+      <text x="20" y="58" fill="#ff9e64" font-size="12" font-weight="700">lux@cozy-box:~$</text>
+      <text x="145" y="58" fill="#fff3e6" font-size="12">whoami</text>
+    </g>
+
+    <!-- Line 2: Output whoami -->
+    <g class="mono">
+      <text x="20" y="82" fill="#bb9af7" font-size="11.5">▸ LUX (404-Lux)</text>
+      <text x="145" y="82" fill="#a79cb8" font-size="11.5">| Frontend and Web Developer</text>
+    </g>
+
+    <!-- Line 3: Command cat about.txt -->
+    <g class="mono">
+      <text x="20" y="114" fill="#ff9e64" font-size="12" font-weight="700">lux@cozy-box:~$</text>
+      <text x="145" y="114" fill="#fff3e6" font-size="12">cat about.txt</text>
+    </g>
+
+    <!-- Line 4 and 5: Core stack and description -->
+    <g class="mono">
+      <text x="20" y="142" fill="#fff3e6" font-size="11.5">Building clean, high-performance web interfaces with</text>
+      <text x="20" y="164" fill="#ff9e64" font-size="11.5" font-weight="600">HTML, CSS, JavaScript, TypeScript, React &amp; Next.js.</text>
+    </g>
+
+    <!-- Line 6: Lo-fi prompt and blinking cursor -->
+    <g class="mono">
+      <text x="20" y="194" fill="#a79cb8" font-size="11">Headphones on, lo-fi beats playing, cold cola at desk. <tspan fill="#ff9e64" class="cursor">█</tspan></text>
+    </g>
+
+    <!-- Sub-bar footer status -->
+    <line x1="20" y1="216" x2="540" y2="216" stroke="#341b52" stroke-width="0.8" stroke-dasharray="3,3" />
+    <text x="20" y="234" fill="#bb9af7" class="mono" font-size="9.5">STATUS: ONLINE</text>
+    <text x="440" y="234" fill="#a79cb8" class="mono" font-size="9.5">UTF-8 • UNIX</text>
+  </g>
+
+  <!-- =========================================================================
+       RIGHT PANEL: CAT MASCOT CARD (about 33% width, exact same height)
+       ========================================================================= -->
+  <g id="mascot-panel">
+    <!-- Panel Shell -->
+    <rect x="574" y="1" width="285" height="248" rx="10" fill="#231a33" stroke="#341b52" stroke-width="1.5" />
+
+    <!-- Titlebar -->
+    <path d="M 574 10 Q 574 1 584 1 L 849 1 Q 859 1 859 10 L 859 32 L 574 32 Z" fill="#1d152b" />
+    <line x1="574" y1="32" x2="859" y2="32" stroke="#341b52" stroke-width="1" />
+    
+    <!-- Dots -->
+    <circle cx="590" cy="16.5" r="4" fill="#f7768e" />
+    <circle cx="602" cy="16.5" r="4" fill="#e0af68" />
+    <circle cx="614" cy="16.5" r="4" fill="#73daca" />
+    <text x="628" y="20.5" fill="#a79cb8" class="mono" font-size="10.5">cat --mascot</text>
+
+    <!-- Floating Lo-Fi Music Notes -->
+    <g class="note-anim-1" fill="#bb9af7" font-size="16" font-family="serif">
+      <text x="625" y="78">♪</text>
+    </g>
+    <g class="note-anim-2" fill="#ff9e64" font-size="14" font-family="serif">
+      <text x="795" y="72">♫</text>
+    </g>
+
+    <!-- Bobbing Head and Cat Mascot Group -->
+    <g class="bobbing-head">
+      <!-- Desk Shadow -->
+      <ellipse cx="717" cy="172" rx="60" ry="8" fill="#150f21" />
+
+      <!-- Cat Body -->
+      <rect x="692" y="127" width="50" height="42" rx="12" fill="#ff9e64" />
+      <rect x="703" y="135" width="28" height="28" rx="6" fill="#fff3e6" opacity="0.85" />
+
+      <!-- Cat Ears -->
+      <polygon points="685,90 699,58 713,82" fill="#ff9e64" />
+      <polygon points="690,86 699,66 707,82" fill="#341b52" />
+      <polygon points="721,82 735,58 749,90" fill="#ff9e64" />
+      <polygon points="727,82 735,66 744,86" fill="#341b52" />
+
+      <!-- Cat Head -->
+      <rect x="682" y="80" width="70" height="52" rx="16" fill="#ff9e64" />
+
+      <!-- Blinking Eyes -->
+      <g class="cat-eyes">
+        <ellipse cx="700" cy="104" rx="4" ry="4" fill="#1a1426" />
+        <circle cx="701.5" cy="102.5" r="1.5" fill="#fff3e6" />
+        <ellipse cx="734" cy="104" rx="4" ry="4" fill="#1a1426" />
+        <circle cx="735.5" cy="102.5" r="1.5" fill="#fff3e6" />
+      </g>
+
+      <!-- Nose and Mouth :3 -->
+      <polygon points="717,111 714,108 720,108" fill="#341b52" />
+      <path d="M 711 114 Q 715 117 717 114 Q 719 117 723 114" stroke="#1a1426" stroke-width="1.8" fill="none" stroke-linecap="round" />
+
+      <!-- Purple Headphones Headband -->
+      <path d="M 674 97 A 43 43 0 0 1 760 97" stroke="#bb9af7" stroke-width="6" fill="none" stroke-linecap="round" />
+      <!-- Earcups -->
+      <rect x="668" y="90" width="12" height="24" rx="4" fill="#bb9af7" stroke="#1a1426" stroke-width="1.5" />
+      <rect x="754" y="90" width="12" height="24" rx="4" fill="#bb9af7" stroke="#1a1426" stroke-width="1.5" />
+
+      <!-- Cola Can Beside Cat -->
+      <g transform="translate(758, 134)">
+        <rect x="0" y="0" width="18" height="34" rx="3" fill="#f7768e" stroke="#1a1426" stroke-width="1.2" />
+        <rect x="2" y="8" width="14" height="16" fill="#ff9e64" opacity="0.9" />
+        <text x="4" y="20" fill="#1a1426" font-size="9" font-weight="900" class="mono">C</text>
+        <!-- Straw -->
+        <line x1="8" y1="0" x2="16" y2="-12" stroke="#fff3e6" stroke-width="2.5" stroke-linecap="round" />
+        <line x1="16" y1="-12" x2="22" y2="-10" stroke="#fff3e6" stroke-width="2.5" stroke-linecap="round" />
+      </g>
+    </g>
+
+    <!-- Status Tag Below -->
+    <rect x="619" y="206" width="196" height="24" rx="6" fill="#1a1426" stroke="#341b52" />
+    <text x="717" y="222" fill="#ff9e64" class="mono" font-size="10" font-weight="600" text-anchor="middle">STATUS: 404 SLEEP NOT FOUND</text>
+  </g>
+</svg>

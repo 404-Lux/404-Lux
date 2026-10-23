@@ -42,17 +42,10 @@
   <img src="assets/header-about.svg" width="100%" alt="About Section Header: ~/about.sh" />
 </p>
 
-<!-- Side-by-Side: Animated Typing Terminal Window + Cat Mascot Card -->
-<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none;">
-  <tr>
-    <td width="66%" valign="top" style="border: none; padding-right: 8px;">
-      <img src="assets/about-terminal.svg" width="100%" alt="Animated Typing Terminal Window" />
-    </td>
-    <td width="34%" valign="top" style="border: none; padding-left: 8px;">
-      <img src="assets/cat-mascot.svg" width="100%" alt="Animated Orange Tabby Cat Mascot with Bobbing Headphones" />
-    </td>
-  </tr>
-</table>
+<!-- Unified Terminal Window + Cat Mascot Card (100% Full-Width) -->
+<p align="center">
+  <img src="assets/about-row.svg" width="100%" alt="Animated Typing Terminal Window and Cat Mascot Card" />
+</p>
 
 <br />
 
@@ -106,42 +99,24 @@
   <img src="assets/header-projects.svg" width="100%" alt="Projects Header: ~/projects" />
 </p>
 
-<!-- 2-Column Responsive Project Grid -->
-<table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: none;">
-  <tr>
-    <td width="50%" valign="top" style="border: none; padding: 6px;">
-      <a href="https://github.com/404-Lux/OJT-Time-Tracker">
-        <img src="assets/card-ojt.svg" width="100%" alt="OJT-Time-Tracker Repository Card" />
-      </a>
-    </td>
-    <td width="50%" valign="top" style="border: none; padding: 6px;">
-      <a href="https://github.com/404-Lux/Lauryn-and-Littles">
-        <img src="assets/card-lauryn.svg" width="100%" alt="Lauryn-and-Littles Repository Card" />
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top" style="border: none; padding: 6px;">
-      <a href="https://github.com/404-Lux/tapkonek-harra">
-        <img src="assets/card-tapkonek.svg" width="100%" alt="tapkonek-harra Repository Card" />
-      </a>
-    </td>
-    <td width="50%" valign="top" style="border: none; padding: 6px;">
-      <a href="https://github.com/404-Lux?tab=repositories">
-        <img src="assets/card-repos.svg" width="100%" alt="All Repositories Catalog Card" />
-      </a>
-    </td>
-  </tr>
-</table>
+<!-- 2-Column Responsive Project Grid (No Table Borders, Edge-to-Edge) -->
+<div align="center">
+  <p align="center">
+    <a href="https://github.com/404-Lux/OJT-Time-Tracker"><img src="assets/card-ojt.svg" width="49%" alt="OJT-Time-Tracker Repository Card" /></a>
+    <a href="https://github.com/404-Lux/Lauryn-and-Littles"><img src="assets/card-lauryn.svg" width="49%" alt="Lauryn-and-Littles Repository Card" /></a>
+    <a href="https://github.com/404-Lux/tapkonek-harra"><img src="assets/card-tapkonek.svg" width="49%" alt="tapkonek-harra Repository Card" /></a>
+    <a href="https://github.com/404-Lux?tab=repositories"><img src="assets/card-repos.svg" width="49%" alt="All Repositories Catalog Card" /></a>
+  </p>
+</div>
 
 <details>
-<summary><b>▸ [CLICK FOR TEXT ACCESS] Project Accessibility Links &amp; Details</b></summary>
-<br />
+  <summary><code>▸ text-only links</code></summary>
+  <br />
 
-* **[OJT-Time-Tracker](https://github.com/404-Lux/OJT-Time-Tracker)**: Streamlined time and attendance tracking web application built to log on-the-job training hours with local state handling (`HTML5`, `CSS3`, `JavaScript`).
-* **[Lauryn-and-Littles](https://github.com/404-Lux/Lauryn-and-Littles)**: Responsive web showcase project crafted with semantic markup and tailored styling (`HTML5`, `CSS3`, `Responsive UI`).
-* **[tapkonek-harra](https://github.com/404-Lux/tapkonek-harra)**: Interactive web application project and frontend utilities architecture (`JavaScript`, `HTML5`, `CSS3`).
-* **[All Repositories](https://github.com/404-Lux?tab=repositories)**: Complete open-source index under the 404-Lux catalog.
+* **[OJT-Time-Tracker](https://github.com/404-Lux/OJT-Time-Tracker)** — Streamlined time and attendance tracking web application built to log training hours with local state handling (`HTML5`, `CSS3`, `JavaScript`).
+* **[Lauryn-and-Littles](https://github.com/404-Lux/Lauryn-and-Littles)** — Responsive web showcase project crafted with semantic markup and tailored styling (`HTML5`, `CSS3`, `Responsive UI`).
+* **[tapkonek-harra](https://github.com/404-Lux/tapkonek-harra)** — Interactive web application project and frontend utilities architecture (`JavaScript`, `HTML5`, `CSS3`).
+* **[All Repositories](https://github.com/404-Lux?tab=repositories)** — Complete open-source index under the 404-Lux catalog.
 
 </details>
 
